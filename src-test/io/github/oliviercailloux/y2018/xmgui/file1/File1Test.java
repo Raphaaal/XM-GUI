@@ -11,7 +11,8 @@ public class File1Test {
 	@Test
 	public void test() {
 		Alternative alt= new Alternative(1);
-		Criterion crt =new Criterion(1);
+		Criterion c =new Criterion(1);
+	
 		
 	}
 

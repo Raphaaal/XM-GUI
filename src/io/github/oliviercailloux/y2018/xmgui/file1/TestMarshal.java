@@ -22,13 +22,13 @@ import io.github.oliviercailloux.y2018.xmgui.contract1.Criterion;
 
 public class TestMarshal {
 
+
 	private Alternative alternative;
 	private Criterion criterion;
-
+	
 	public TestMarshal(Alternative alt, Criterion crt) {
 		alternative = alt;
 		criterion = crt;
-
 	}
 
 	public void marshalAndShow() throws JAXBException, FileNotFoundException, IOException {
@@ -55,14 +55,13 @@ public class TestMarshal {
 		 
 		marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, Boolean.TRUE);
         
-		try(final FileOutputStream fos = new FileOutputStream(new File("C:/Users/Lamrani/3D Objects/XM-GUI/resources/resourcesfile1/test2.xml"))){
+		try(final FileOutputStream fos = new FileOutputStream(new File("/Users/Razorin/Desktop/PERSO/MIAGE/DEV/JAVA/XM-GUI/resources/resourcesfile1/testAyoub.xml"))) {
 				marshaller.marshal(xmcda,fos);
-				
 		}
 		
 	}
 
-	// main pour tester à enelver avant le commit final
+	// main pour tester Ã  enlever avant le commit final -> Attention, cela envoie un "WARNING: An illegal reflective access operation has occurred" en Java 9
 
 	public static void main(String[] args) throws JAXBException, FileNotFoundException, IOException {
 		Criterion crt = new Criterion(1);
